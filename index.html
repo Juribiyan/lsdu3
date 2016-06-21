@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chaika Encoder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="lsdu3.js"></script>
+</head>
+<body>
+  <input type="text" value="Игорь Юрьевич Чайка">
+  <div id="output"></div>
+  <script>
+    $('input').on('input', function() {
+      var encoded = chaikaEncode($(this).val())
+      if(encoded.error) 
+        $('#output').addClass('error').text(encoded.error)
+      else
+        $('#output').removeClass('error').text(encoded.result)
+    }).trigger('input')
+  </script>
+</body>
+</html>
