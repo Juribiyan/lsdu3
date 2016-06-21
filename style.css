@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 2%;
+}
+
+input {
+  font-size: 22px;
+}
+
+#output {
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.error#output {
+  color: red;
+  font-size: 22px;
+}
