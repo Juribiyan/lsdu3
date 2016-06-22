@@ -1,10 +1,11 @@
 var q = [
-  [38,1,4,4],
-  [9,2,2,5],
-  [36,3,8],
-  [0,7,14],
-  [38,1,1]
-], maxLength = 17 // недостаточно информации для большей длины
+  [38,1,4,4,2,27,7,3,17,3],
+  [9,2,2,5,4,17,3,6,7,3],
+  [36,3,8,2,4,17,1,6,9,4],
+  [0,7,14,5,4,17,3,6,7,3],
+  [38,1,1,4,2,27,7,3,17,3]
+], 
+maxLength = 50
 
 function chaikaEncode(str) {
   str = str.replace(/\s/g, '')
@@ -31,7 +32,7 @@ function chaikaEncode(str) {
   }
   for(var pos = 0; pos <= 4; pos++) {
     blocks[pos] = []
-    for(i = 0; i <= 3; i++) {
+    for(i = 0; i <= 9; i++) {
       var offset = i * 5
       if(chars[pos+offset])
         blocks[pos].push(chars[pos+offset])
